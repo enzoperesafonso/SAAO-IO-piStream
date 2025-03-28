@@ -1,8 +1,6 @@
 # Raspberry Pi USB Webcam Audio/Video Streamer
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-Streams video (MJPEG) and audio (Raw PCM) from a USB webcam connected to a Raspberry Pi over the network via a simple web interface. Includes auto-detection for USB audio devices and clear troubleshooting guidance.
+Streams video (MJPEG) and audio (Raw PCM) from a USB webcam connected to a Raspberry Pi over the network via a simple web interface. Includes auto-detection for USB audio devices.
 
 **Author:** Enzo Peres Afonso (2025)
 
@@ -69,7 +67,7 @@ Streams video (MJPEG) and audio (Raw PCM) from a USB webcam connected to a Raspb
 
 ## Configuration
 
-Most configuration options are at the top of the `stream_server.py` script. Edit this file before running if needed:
+Most configuration options are at the top of the `piStream.py` script. Edit this file before running if needed:
 
 *   **`AUDIO_DEVICE_INDEX`**: Leave as `None` to attempt auto-detection (searches for "USB" in the device name). If auto-detection fails or selects the wrong device, set this manually to the correct index number. Run the script once to see the list of detected devices and their indices, or use `arecord -l` in the terminal.
 *   **`VIDEO_DEVICE_INDEX`**: Usually `0` for the default USB webcam. Change if you have multiple cameras. Use `v4l2-ctl --list-devices` to check.
