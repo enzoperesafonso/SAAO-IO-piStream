@@ -85,7 +85,7 @@ Most configuration options are at the top of the `piStream.py` script. Edit this
 
 2.  **Run the Server:**
     ```bash
-    python stream_server.py
+    python piStream.py
     ```
 
 3.  **Access the Stream:**
