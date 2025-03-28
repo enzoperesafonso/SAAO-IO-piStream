@@ -404,9 +404,9 @@ if __name__ == '__main__':
              raise SystemExit # Or sys.exit(1)
 
         # --- Start Flask Server ---
-        print("\nStarting Flask development server...")
+        print("\nStarting Flask server...")
         print(f"Access the web interface at: http://<YOUR_PI_IP>:5000/")
-        # Note: Use a production WSGI server (like Gunicorn or Waitress) for deployment
+        # Note: it will complain about us not using a production server for deployment but is fine for local network :)
         app.run(host='0.0.0.0', port=5000, threaded=True, debug=False, use_reloader=False)
 
     except Exception as e:
@@ -416,8 +416,7 @@ if __name__ == '__main__':
         print("\nShutting down...")
         stop_event.set() # Signal threads one last time
 
-        # Wait briefly for threads to potentially clean up (daemons might exit abruptly)
-        # If cleaner shutdown needed, remove daemon=True and explicitly join() threads
+        # Wait briefly for threads to potentially clean up ...
         time.sleep(0.5)
 
         if p is not None:
