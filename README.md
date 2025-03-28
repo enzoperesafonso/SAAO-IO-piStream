@@ -49,8 +49,8 @@ Streams video (MJPEG) and audio (Raw PCM) from a USB webcam connected to a Raspb
 
 2.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/pi-webcam-stream.git # Replace YOUR_USERNAME!
-    cd pi-webcam-stream
+    git clone https://github.com/enzoperesafonso/SAAO-IO-piStream.git
+    cd SAAO-IO-piStream
     ```
 
 3.  **Set up Python Virtual Environment (Recommended):**
